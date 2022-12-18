@@ -2,6 +2,10 @@ upload_init_body='{ "registerUploadRequest": { "recipes": [ "urn:li:digitalmedia
 
 git show --name-only --oneline HEAD |
   rg 'post-[0-9]*/' -o $1 |
+  uniq | xargs echo
+
+git show --name-only --oneline HEAD |
+  rg 'post-[0-9]*/' -o $1 |
   uniq |
   while read file;
   do

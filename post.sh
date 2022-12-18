@@ -69,18 +69,3 @@ git show --name-only --oneline HEAD |
     -X POST https://api.linkedin.com/v2/ugcPosts;
 
   done
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-social-posts/post.sh at master · 64BitAsura/social-posts

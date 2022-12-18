@@ -1,14 +1,13 @@
-
 upload_init_body='{ "registerUploadRequest": { "recipes": [ "urn:li:digitalmediaRecipe:feedshare-image" ], "owner": "urn:li:person:jzEm-jsKUu", "serviceRelationships": [ { "relationshipType": "OWNER", "identifier": "urn:li:userGeneratedContent" } ] } }'
 
 echo $PERSON_URN
 
 git show --name-only --oneline HEAD |
-  rg 'post-[0-9]*/*' -o $1 | 
-  uniq | 
-  while read file; 
-  do 
-    image_urn=$(test -f "./${file}image.png" && 
+  rg 'post-[0-9]*/' -o $1 |
+  uniq |
+  while read file;
+  do
+    image_urn=$(test -f "./${file}image.png" &&
       curl -H "Authorization: Bearer $LINKEDIN_ACCESS_TOKEN" \
          -H "Connection: Keep-Alive" \
          -d "${upload_init_body}" \
@@ -50,15 +49,16 @@ git show --name-only --oneline HEAD |
     }
 }
      ' ||
+
     echo '
-    { "author": "urn:li:person:'$PERSON_URN'", 
-      "lifecycleState": "PUBLISHED", 
-      "specificContent": { 
-      "com.linkedin.ugc.ShareContent": { 
-      "shareCommentary": { 
-      "text": "'$(cat ./${file}/content.txt)'" }, 
-      "shareMediaCategory": "NONE" } }, 
-      "visibility": { 
+    { "author": "urn:li:person:'$PERSON_URN'",
+      "lifecycleState": "PUBLISHED",
+      "specificContent": {
+      "com.linkedin.ugc.ShareContent": {
+      "shareCommentary": {
+      "text": "'$(cat ./${file}/content.txt)'" },
+      "shareMediaCategory": "NONE" } },
+      "visibility": {
       "com.linkedin.ugc.MemberNetworkVisibility": "PUBLIC" } }
     '
    );

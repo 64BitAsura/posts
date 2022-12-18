@@ -1,6 +1,8 @@
 
 upload_init_body='{ "registerUploadRequest": { "recipes": [ "urn:li:digitalmediaRecipe:feedshare-image" ], "owner": "urn:li:person:jzEm-jsKUu", "serviceRelationships": [ { "relationshipType": "OWNER", "identifier": "urn:li:userGeneratedContent" } ] } }'
 
+echo $PERSON_URN
+
 git show --name-only --oneline HEAD |
   rg 'post-[0-9]*/*' -o $1 | 
   uniq | 
@@ -21,7 +23,7 @@ git show --name-only --oneline HEAD |
            -H "Authorization: Bearer $LINKEDIN_ACCESS_TOKEN" $0 && echo $1');
      post_body=$( [ "$image_urn" != "" ] && echo '
        {
-    "author": "urn:li:person:jzEm-jsKUu",
+    "author": "urn:li:person:'$PERSON_URN'",
     "lifecycleState": "PUBLISHED",
     "specificContent": {
         "com.linkedin.ugc.ShareContent": {
@@ -49,7 +51,7 @@ git show --name-only --oneline HEAD |
 }
      ' ||
     echo '
-    { "author": "urn:li:person:jzEm-jsKUu", 
+    { "author": "urn:li:person:'$PERSON_URN'", 
       "lifecycleState": "PUBLISHED", 
       "specificContent": { 
       "com.linkedin.ugc.ShareContent": { 

@@ -32,4 +32,4 @@ jobs:
         env: # Or as an environment variable
          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
          PERSON_URN: ${{ secrets.PERSON_URN }}
-        run: LINKEDIN_ACCESS_TOKEN="$LINKEDIN_ACCESS_TOKEN" PERSON_URN="$PERSON_URN" ./post.sh
+        run: env

@@ -28,7 +28,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Post in LinkedIn
-        with: # Or as an environment variable
+        env: # Or as an environment variable
          LINKEDIN_ACCESS_TOKEN: CCC
          PERSON_URN: ggg
         run: ./post.sh

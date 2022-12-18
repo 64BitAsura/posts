@@ -1,31 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Codespaces
-Marketplace
-Explore
- 
-@64BitAsura 
-64BitAsura
-/
-social-posts
-Private
-Code
-Issues
-Pull requests
-Actions
-Projects
-Security
-Insights
-Settings
-social-posts/post.sh
-
-Sambath Kumar Logakrishnan post 1
-Latest commit 8015b69 15 hours ago
- History
- 0 contributors
-Executable File  71 lines (67 sloc)  2.44 KB
 
 upload_init_body='{ "registerUploadRequest": { "recipes": [ "urn:li:digitalmediaRecipe:feedshare-image" ], "owner": "urn:li:person:jzEm-jsKUu", "serviceRelationships": [ { "relationshipType": "OWNER", "identifier": "urn:li:userGeneratedContent" } ] } }'
 

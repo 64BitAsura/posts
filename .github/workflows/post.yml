@@ -28,7 +28,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Post in LinkedIn
-        env: # Or as an environment variable
-         LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
-         PERSON_URN: ${{ secrets.PERSON_URN }}
+        with: # Or as an environment variable
+         LINKEDIN_ACCESS_TOKEN: CCC
+         PERSON_URN: ggg
         run: ./post.sh

@@ -30,6 +30,6 @@ jobs:
       - name: Post in LinkedIn
         shell: bash
         env: # Or as an environment variable
-         LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
-         PERSON_URN: ${{ secrets.PERSON_URN }}
+         LINKEDIN_ACCESS_TOKEN: ${{ secrets.LinkedIn_Access_Token }}
+         PERSON_URN: ${{ secrets.LinkedIn_Access_Token }}
         run: env

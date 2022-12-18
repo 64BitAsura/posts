@@ -1,7 +1,5 @@
 upload_init_body='{ "registerUploadRequest": { "recipes": [ "urn:li:digitalmediaRecipe:feedshare-image" ], "owner": "urn:li:person:jzEm-jsKUu", "serviceRelationships": [ { "relationshipType": "OWNER", "identifier": "urn:li:userGeneratedContent" } ] } }'
 
-echo $PERSON_URN
-
 git show --name-only --oneline HEAD |
   rg 'post-[0-9]*/' -o $1 |
   uniq |

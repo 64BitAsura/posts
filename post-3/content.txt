@@ -1,0 +1,3 @@
+#CSSWG #CSS working group making poll on how nested CSS selector queries syntax need to look like, do vote- https://webkit.org/blog/13607/help-choose-from-options-for-css-nesting-syntax/
+
+#chromium #safari #firefox #webdevelopment #frontenddevelopment 

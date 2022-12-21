@@ -2,7 +2,7 @@ upload_init_body='{ "registerUploadRequest": { "recipes": [ "urn:li:digitalmedia
 
 git log | echo
 
-git show --name-only --oneline HEAD |
+$(git diff-tree --no-commit-id --name-only -r HEAD || steps.changed-files.outputs.added_files) |
   rg 'post-[0-9]*/' -o $1 |
   uniq | xargs echo
 

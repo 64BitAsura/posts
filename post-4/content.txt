@@ -1,0 +1,4 @@
+#CSS container queries soon not only used based on container's size, but based
+on container's style via setting #CSS variable in style attribute, currently under flag in #chrome canary- https://css-tricks.com/a-few-times-container-size-queries-would-have-helped-me-out/#aa-case-1-card-grid 
+
+#chromium #safari #firefox #webdevelopment #frontenddevelopment #future

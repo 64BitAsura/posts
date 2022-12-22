@@ -3,7 +3,7 @@ upload_init_body='{ "registerUploadRequest": { "recipes": [ "urn:li:digitalmedia
 
 (git diff-tree --no-commit-id --name-only -r main || echo $CHANGES) | rg 'post-[0-9]*/' -o $1 | uniq | xargs echo
 
-//git show --name-only --oneline main |
+(git diff-tree --no-commit-id --name-only -r main || echo $CHANGES) |
   rg 'post-[0-9]*/' -o $1 |
   uniq |
   while read file;

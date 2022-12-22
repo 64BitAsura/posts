@@ -5,7 +5,7 @@ git show --name-only --oneline main |
   rg 'post-[0-9]*/' -o $1 |
   uniq | xargs echo
 
-git show --name-only --oneline main |
+//git show --name-only --oneline main |
   rg 'post-[0-9]*/' -o $1 |
   uniq |
   while read file;

@@ -1,11 +1,11 @@
 upload_init_body='{ "registerUploadRequest": { "recipes": [ "urn:li:digitalmediaRecipe:feedshare-image" ], "owner": "urn:li:person:jzEm-jsKUu", "serviceRelationships": [ { "relationshipType": "OWNER", "identifier": "urn:li:userGeneratedContent" } ] } }'
 
 
-git show --name-only --oneline |
+git show --name-only --oneline main |
   rg 'post-[0-9]*/' -o $1 |
   uniq | xargs echo
 
-git show --name-only --oneline |
+git show --name-only --oneline main |
   rg 'post-[0-9]*/' -o $1 |
   uniq |
   while read file;

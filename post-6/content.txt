@@ -1,0 +1,3 @@
+#browser #serialization overhead of data from and to #wasm a.k.a #webassembly runtime is still expensive- https://twitter.com/slicknet/status/1608170333340839940
+
+#chromium #safari #firefox #webdevelopment #frontenddevelopment 

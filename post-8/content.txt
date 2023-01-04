@@ -1,0 +1,3 @@
+#webassembly acknowledgement and take of #redhat, one #OCI image for all machine instruction sets- https://www.redhat.com/en/blog/red-hat-and-webassembly
+
+#chromium #safari #firefox #serverless #computing #faas #cloud #performance #innovation 
